@@ -1,0 +1,699 @@
+{
+"ConvenientEffects": {
+        "AppName": "Pohodlné efekty (Convenient Effects)",
+        "BackupAppName": "Záloha pohodlných efektů",
+
+        "SettingPlayer": "Hráč",
+        "SettingTrustedPlayer": "Důvěryhodný hráč",
+        "SettingAssistantGM": "Asistent PJ",
+        "SettingGameMaster": "Pán jeskyně",
+        "SettingNone": "Žádný",
+
+        "SettingAppControlsPermissionName": "Oprávnění pro ovládání aplikace",
+        "SettingAppControlsPermissionHint": "Určuje minimální úroveň oprávnění pro zobrazení a použití ´Pohodlné efekty´ prostřednictvím aplikace pomocí tlačítka v ovládacích prvcích tokenu. Nastavení na ´Žádný´ toto tlačítko úplně deaktivuje.",
+
+        "SettingCreateFoldersPermissionName": "Oprávnění pro vytváření složek",
+        "SettingCreateFoldersPermissionHint": "Určuje minimální úroveň oprávnění pro vytváření nových složek efektů v aplikaci ´Pohodlné efekty´. Nastavení na ´Žádný´ úplně deaktivuje tlačítko pro vytvoření. Aby tato funkce fungovala, musí mít uživatel také oprávnění Foundry pro vytváření položek.",
+
+        "KeybindingToggleAppName": "Přepnutí aplikace ´Pohodlné efekty´",
+        "KeybindingToggleAppHint": "Toto buď otevře aplikaci ´Pohodlné efekty´, pokud je zavřená, nebo ji zavře, pokud je aktuálně otevřená.",
+
+        "CreateFolder": "Vytvořit složku",
+        "CreateEffect": "Vytvořit efekt",
+        "ViewBackups": "Zobrazit zálohy",
+        "ShowFolder": "Zobrazit složku",
+        "HideFolder": "Skrýt složku",
+        "ShowHiddenEffects": "Zobrazit skryté efekty",
+        "ShowNestedEffects": "Zobrazit vnořené efekty",
+        "PrioritizeTargets": "Upřednostnit cíle",
+        "NewEffect": "Nový efekt",
+        "EditEffect": "Upravit efekt",
+        "DeleteEffect": "Smazat efekt",
+        "ShowEffect": "Zobrazit efekt",
+        "HideEffect": "Skrýt efekt",
+        "ToggleAsOverlay": "Přepnout jako překryv",
+        "ToggleStatusEffect": "Přepnout efekt stavu",
+        "ResetSystemEffects": "Resetovat systémové efekty",
+        "ResetSystemEffectsWarning": "Tímto se systémové efekty zcela resetují na vestavěné efekty, čímž se zruší všechny vlastní úpravy, odstranění i vytvoření.",
+
+        "FolderHidden": "Skrytá složka",
+        "Passive": "Pasivní",
+        "EffectHidden": "Skrytý efekt",
+        "HasNestedEffects": "Obsahuje vnořené efekty",
+        "IsNestedEffect": "Je vnořený efekt",
+        "StatusEffect": "Efekt stavu",
+        "MidiQolEffects": "Efekty Midi-QoL",
+        "AtlEffects": "Efekty ATL",
+        "TokenMagicEffects": "Efekty Token Magic",
+
+        "ConfigTitle": "Nastavení ´Pohodlných efektů´",
+        "ConfigLabel": "Pohodlné",
+        "ConfigFoundryEffectIdLabel": "ID efektu Foundry",
+        "ConfigFoundryEffectIdHint": "Toto je ID efektu Foundry a lze jej použít k vyhledání, přidání, nebo odstranění efektu.",
+        "ConfigConvenientEffectIdLabel": "ID efektu pohodlného efektu",
+        "ConfigConvenientEffectIdHint": "Toto je ID pohodlného efektu a lze jej použít k vyhledání, přidání, nebo odstranění efektu.",
+        "ConfigTemporaryLabel": "Dočasný",
+        "ConfigTemporaryHint": "Pokud je zaškrtnuto, bude tento efekt vždy označen jako dočasný, i když nemá žádné trvání či stav.",
+        "ConfigViewableLabel": "Viditelný",
+        "ConfigViewableHint": "Pokud je zaškrtnuto, bude tento efekt vždy zobrazen v aplikaci.",
+        "ConfigDynamicLabel": "Dynamický",
+        "ConfigDynamicHint": "Pokud je zaškrtnuto, pak tento efekt bude mít dynamické efekty aplikované na základě dat postavy. Toto nelze změnit a používá se pro velmi specifické případy efektů.",
+        "ConfigNestedEffectsLabel": "Vnořené efekty",
+        "ConfigNestedEffectsHint": "Vnořené efekty, které budou zobrazeny jako možnosti při přidání či odebrání efektu.",
+        "ConfigSubEffectsLabel": "Podřízené efekty",
+        "ConfigSubEffectsHint": "Podřízené efekty, které budou aplikovány v souvislosti s tímto efektem. Pokud je tento efekt odstraněn, všechny podřízené efekty budou automaticky odstraněny také.",
+        "ConfigOtherEffectsLabel": "Další efekty",
+        "ConfigOtherEffectsHint": "Další efekty, které budou aplikovány v souvislosti s tímto efektem. Pokud je tento efekt odstraněn, další efekty nebudou automaticky odstraněny.",
+        "Dnd": {
+            "Folders": {
+                "Conditions": "Stavy",
+                "Spells": "Kouzla",
+                "ClassFeatures": "Schopnosti povolání",
+                "Equipment": "Vybavení",
+                "Other": "Ostatní"
+            },
+            "AcidArrow": {
+                "name": "Melfův kyselinový šíp",
+                "description": "Způsobí 2k4 kyselinového zranění na konci dalšího tahu"
+            },
+            "Aid": {
+                "name": "Podpora",
+                "description": "Přidá k aktuálním a maximálním bodům výdrže po dobu 8 hodin"
+            },
+            "AlterSelf": {
+                "name": "Změň svůj tvar",
+                "description": "Žádné aktivní efekty, trvá 1 hodinu"
+            },
+            "AntilifeShell": {
+                "name": "Štít proti živým",
+                "description": "Žádné aktivní efekty, trvá 1 hodinu"
+            },
+            "ArcaneHand": {
+                "name": "Mystická ruka",
+                "description": "Žádné aktivní efekty, trvá 1 minutu"
+            },
+            "Bane": {
+                "name": "Uřknutí",
+                "description": "Odčítá 1k4 od všech záchranných hodů a hodů na útok po dobu 1 minuty"
+            },
+            "BardicInspiration": {
+                "name": "Bardská inspirace",
+                "description": "Přidá kostku k jednomu ověření vlastnosti, hodu na útok, nebo záchrannému hodu během následujících 10 minut"
+            },
+            "BardicInspirationD10": {
+                "name": "Bardská inspirace (k10)",
+                "description": "Pro bardy od 10. do 14. úrovně"
+            },
+            "BardicInspirationD12": {
+                "name": "Bardská inspirace (k12)",
+                "description": "Pro bardy od 15. do 20. úrovně"
+            },
+            "BardicInspirationD6": {
+                "name": "Bardská inspirace (k6)",
+                "description": "Pro bardy od 1. do 4. úrovně"
+            },
+            "BardicInspirationD8": {
+                "name": "Bardská inspirace (k8)",
+                "description": "Pro bardy od 5. do 9. úrovně"
+            },
+            "Barkskin": {
+                "name": "Kůrokůže",
+                "description": "Zvýší OČ na 16 po dobu 1 hodiny"
+            },
+            "BeaconOfHope": {
+                "name": "Maják naděje",
+                "description": "Poskytuje Výhodu k záchranným hodům na Moudrost a záchraná proti smrti po dobu 1 minuty"
+            },
+            "BearsEndurance": {
+                "name": "Medvědí odolnost",
+                "description": "Výhoda na ověřování Odolnosti a 2k6 dočasných bodů výdrže po dobu 1 hodiny"
+            },
+            "BlackTentacles": {
+                "name": "Evardova černá chapadla",
+                "description": "Aplikuje efekt stavu ´spoutaný´ po dobu 1 minuty"
+            },
+            "Bless": {
+                "name": "Požehnání",
+                "description": "Přidá 1k4 ke všem záchranným hodům a hodům na útok po dobu 1 minuty"
+            },
+            "Blinded": {
+                "name": "Oslepený",
+                "description": "- oslepená bytost nevidí a automaticky selže při jakémkoliv ověření vlastnosti vyžadujícím zrak.<br />- Hody na útok proti této bytosti mají Výhodu a její vlastní hody na útok mají Nevýhodu."
+            },
+            "BlindingSickness": {
+                "name": "Oslepnutí",
+                "description": "Nevýhoda na ověřování Moudrosti a záchranné hody na Moudrost po dobu 7 dnů"
+            },
+            "Blindness": {
+                "name": "Slepota",
+                "description": "Nevýhoda na hody na útok, zatímco útočníci proti této bytosti mají Výhodu po dobu 1 minuty"
+            },
+            "BlindnessDeafness": {
+                "name": "Slepota/Hluchota",
+                "description": "Vyber si mezi slepotou či hluchotou"
+            },
+            "Blur": {
+                "name": "Rozmazání",
+                "description": "Dává Nevýhodu všem útočníkům po dobu 1 minuty"
+            },
+            "BonusAction": {
+                "name": "Bonusová akce",
+                "description": "Žádné aktivní efekty, vyprší na začátku tahu"
+            },
+            "BullsStrength": {
+                "name": "Býčí síla",
+                "description": "Výhoda na ověřování Síly a dvojnásobná maximální nosnost po dobu 1 hodiny"
+            },
+            "BullseyeLantern": {
+                "name": "Směrová lucerna",
+                "description": "Poskytuje světlo lucerny v kuželu 60 stupňů po dobu 6 hodin (vyžaduje ATL)"
+            },
+            "Candle": {
+                "name": "Svíčka",
+                "description": "Poskytuje světlo svíčky po dobu 1 hodiny (vyžaduje ATL)"
+            },
+            "CatsGrace": {
+                "name": "Kočičí ladnost",
+                "description": "Výhoda na ověřování Obratnosti po dobu 1 hodiny"
+            },
+            "ChannelDivinitySacredWeapon": {
+                "name": "Božská přízeň: Posvátná zbraň",
+                "description": "Přidá opravu Charismatu (minimálně +1) ke všem hodům na útok zbraní a vyzařuje světlo 20/40 stop po dobu 1 minuty (vyžaduje ATL)"
+            },
+            "ChannelDivinityTurnTheUnholy": {
+                "name": "Božská přízeň: Odvracení znesvěcených",
+                "description": "Žádné aktivní efekty, trvá 1 minutu. Vyprší při obdržení zranění."
+            },
+            "ChannelDivinityTurnUndead": {
+                "name": "Božský kanál: Odvracení nemrtvých",
+                "description": "Žádné aktivní efekty, trvá 1 minutu. Vyprší při obdržení zranění."
+            },
+            "CharmPerson": {
+                "name": "Zmam osobu",
+                "description": "Žádné aktivní efekty, trvá 1 hodinu"
+            },
+            "Charmed": {
+                "name": "Zmámený",
+                "description": "- zmámená bytost nemůže útočit na zmámitele, ani jej cílit škodícími schopnostmi či magickými efekty.<br/>- zmámitel má při sociální interakci s touto bytostí Výhodu na všechna ověření vlastností."
+            },
+            "Command": {
+                "name": "Rozkaz",
+                "description": "Žádné aktivní efekty, trvá do konce příštího tahu"
+            },
+            "ComprehendLanguages": {
+                "name": "Porozumění jazykům",
+                "description": "Přidá všechny jazyky po dobu 1 hodiny"
+            },
+            "Concentrating": {
+                "name": "Koncentrace",
+                "description": "Některá kouzla vyžadují, abys udržoval(a) soustředění, aby jejich magie zůstala aktivní. Pokud ztratíš koncentraci, pak takové kouzlo skončí."
+            },
+            "Contagion": {
+                "name": "Nákaza",
+                "description": "Vyber si mezi oslepnutím, žlutou zimnicí, leprou, zápalem mozkových blan, třesavkou, nebo slizkou zhoubou"
+            },
+            "CoverHalf": {
+                "name": "Kryt (poloviční)",
+                "description": "Přidá +2 k OČ a záchranným hodům na Obratnost"
+            },
+            "CoverThreeQuarters": {
+                "name": "Kryt (tříčtvrteční)",
+                "description": "Přidá +5 k OČ a záchranným hodům na Obratnost"
+            },
+            "CoverTotal": {
+                "name": "Kryt (plný)",
+                "description": "Všechny útoky automaticky selžou"
+            },
+            "Darkvision": {
+                "name": "Vidění ve tmě",
+                "description": "Vylepší vidění ve tmě na 60 stop po dobu 8 hodin"
+            },
+            "Dead": {
+                "name": "Mrtvý",
+                "description": "Žádné aktivní efekty"
+            },
+            "Deafened": {
+                "name": "Ohlušený",
+                "description": "- ohlušená bytost neslyší a automaticky selže při jakémkoli ověření vlastnosti vyžadujícím sluch."
+            },
+            "Deafness": {
+                "name": "Hluchota",
+                "description": "Žádné aktivní efekty, trvá 1 minutu"
+            },
+            "DisguiseSelf": {
+                "name": "Přestrojení",
+                "description": "Žádné aktivní efekty, trvá 1 hodinu"
+            },
+            "DivineFavor": {
+                "name": "Přízeň bohů",
+                "description": "Přidá 1k4 zářivého zranění k útokům zbraní po dobu 1 minuty"
+            },
+            "DivineWord": {
+                "name": "Božské slovo",
+                "description": "Přidává různé efekty podle zbývajících bodů výdrže",
+                "dead": "Okamžitě zabít",
+                "stunned": "Oslepení, ohlušení a omráčení na 1 hodinu",
+                "blinded": "Ohlušení a oslepení na 10 minut",
+                "deafened": "Ohlušení na 1 minutu"
+            },
+            "Dodge": {
+                "name": "Uhýbání",
+                "description": "Poskytuje Nevýhodu všem útočníkům a Výhodu na všechny záchranné hody na Obratnost do příštího tahu"
+            },
+            "EaglesSplendor": {
+                "name": "Orlí nádhera",
+                "description": "Výhoda na ověření Charismatu po dobu 1 hodiny"
+            },
+            "Encumbered": {
+                "name": "Přetížený",
+                "description": "Snižuje pohyb o 10 stop"
+            },
+            "EnhanceAbility": {
+                "name": "Zlepši vlastnost",
+                "description": "Vyber si mezi Medvědí výdrží, Býčí silou, Kočičí mrštností, Orlí nádherou, Liščí chytrostí, nebo Soví moudrostí"
+            },
+            "Enlarge": {
+                "name": "Zvětšení",
+                "description": "Přidá 1k4 k zásahu a poskytuje Výhodu na ověření Síly a záchranné hody na Sílu po dobu 1 minuty"
+            },
+            "EnlargeReduce": {
+                "name": "Zvětšení/Zmenšení",
+                "description": "Vyber si mezi zvětšením a zmenšením"
+            },
+            "Exhaustion1": {
+                "name": "Vyčerpání 1",
+                "description": "Nevýhoda na ověření vlastností"
+            },
+            "Exhaustion2": {
+                "name": "Vyčerpání 2",
+                "description": "Nevýhoda na ověření vlastností a poloviční Rychlost"
+            },
+            "Exhaustion3": {
+                "name": "Vyčerpání 3",
+                "description": "Nevýhoda na ověření vlastností, poloviční Rychlost a Nevýhoda na útoky a záchranné hody"
+            },
+            "Exhaustion4": {
+                "name": "Vyčerpání 4",
+                "description": "Nevýhoda na ověření vlastností, poloviční Rychlost, Nevýhoda na útoky a záchranné hody a poloviční maximální počet bodů výdrže"
+            },
+            "Exhaustion5": {
+                "name": "Vyčerpání 5",
+                "description": "Nevýhoda na ověření vlastností, Rychlost snížena na 0, Nevýhoda na útoky a záchranné hody a poloviční maximální počet bodů výdrže"
+            },
+            "FaerieFire": {
+                "name": "Vílí oheň",
+                "description": "Poskytuje Výhodu všem útočníkům po dobu 1 minuty"
+            },
+            "FalseLife": {
+                "name": "Falešný život",
+                "description": "Přidává dočasné body výdrže na 1 hodinu"
+            },
+            "FeatherFall": {
+                "name": "Pomalý pád",
+                "description": "Žádné aktivní efekty, trvá 1 minutu"
+            },
+            "Feeblemind": {
+                "name": "Slabomyslnost",
+                "description": "Nastaví hodnoty Inteligence a Charismatu na 1, dokud není odstraněno"
+            },
+            "FilthFever": {
+                "name": "Žlutá zimnice",
+                "description": "Nevýhoda na ověření Síly, záchranné hody na Sílu a útoky založené na Síle po dobu 7 dní"
+            },
+            "FindThePath": {
+                "name": "Najdi cestu",
+                "description": "Žádné aktivní efekty, trvá 1 den"
+            },
+            "FireShield": {
+                "name": "Ohnivý štít",
+                "description": "Vyber si mezi odoláním vůči chladu či ohni"
+            },
+            "FireShieldColdResistance": {
+                "name": "Ohnivý štít (odolání vůči chladu)",
+                "description": "Přidá odolání vůči chladu po dobu 10 minut"
+            },
+            "FireShieldFireResistance": {
+                "name": "Ohnivý štít (odolání vůči ohni)",
+                "description": "Přidá odolání vůči ohni po dobu 10 minut"
+            },
+            "Flanked": {
+                "name": "Obklíčený",
+                "description": "Poskytuje Výhodu všem kolem, kteří útočí na blízko"
+            },
+            "Flanking": {
+                "name": "Obkličující",
+                "description": "Poskytuje Výhodu na útoky na blízko"
+            },
+            "FleshRot": {
+                "name": "Lepra",
+                "description": "Nevýhoda na ověření Charismatu a zranitelnost vůči veškerému zranění"
+            },
+            "Fly": {
+                "name": "Let",
+                "description": "Zvýší Rychlost letu na 60 stop po dobu 10 minut"
+            },
+            "Foresight": {
+                "name": "Předtucha",
+                "description": "Poskytuje Výhodu na útoky, ověření vlastností a záchranné hody, zatímco útočníkům dává Nevýhodu po dobu 8 hodin"
+            },
+            "FoxsCunning": {
+                "name": "Liščí chytrost",
+                "description": "Výhoda na ověření Inteligence po dobu 1 hodiny"
+            },
+            "FreedomOfMovement": {
+                "name": "Volnost",
+                "description": "Žádné aktivní efekty, trvá 1 hodinu"
+            },
+            "Frightened": {
+                "name": "Vystrašený",
+                "description": "- vystrašená bytost má Nevýhodu na ověření vlastností a útočné hody, dokud má zdroj svého strachu v dohledu.<br />- Nemůže se dobrovolně přiblížit ke zdroji svého strachu."
+            },
+            "GlobeOfInvulnerability": {
+                "name": "Koule nezranitelnosti",
+                "description": "Žádné aktivní efekty, trvá 1 minutu"
+            },
+            "Grappled": {
+                "name": "Držený",
+                "description": "- Rychlost držené bytosti se sníží na 0 a nemůže získat bonusy ke své Rychlosti.<br />- Tento stav končí, pokud je ten, kdo drží, vyřazen z boje.<br />- Stav také končí, pokud nějaký efekt odstraní drženou bytost z dosahu toho, kdo ji drží."
+            },
+            "GreatWeaponMaster": {
+                "name": "Mistr obouručních zbraní",
+                "description": "Odečítá 5 od hodů na útok na blízko, ale přidává 10 ke zranění na blízko"
+            },
+            "GreaterInvisibility": {
+                "name": "Mocná neviditelnost",
+                "description": "Poskytuje Výhodu na útočné hody a způsobuje Nevýhodu všem, kteří útočí na cíl, po dobu 1 minuty"
+            },
+            "Guidance": {
+                "name": "Vedení",
+                "description": "Přidává 1k4 k jednomu ověření vlastnosti či dovednosti po dobu 1 minuty"
+            },
+            "GuidingBolt": {
+                "name": "Naváděná střela",
+                "description": "Poskytuje výhodu dalšímu útočníkovi, nebo do konce příštího tahu"
+            },
+            "Haste": {
+                "name": "Rychlost",
+                "description": "Zdvojnásobí Rychlost, přidá 2 k OČ a poskytuje Výhodu na záchranné hody na Obratnost po dobu 1 minuty"
+            },
+            "HeavilyEncumbered": {
+                "name": "Těžké zatížení",
+                "description": "Snižuje pohyb o 20 stop, poskytuje Nevýhodu na všechny útočné hody a Nevýhodu na záchranné hody na Sílu, Obratnost a Odolnost"
+            },
+            "HeroesFeast": {
+                "name": "Hostina",
+                "description": "Imunita vůči jedu a vystrašení, Výhoda na všechny záchranné hody na Moudrost a maximální počet bodů výdrže se zvýší o 2k10 po dobu 24 hodin"
+            },
+            "Heroism": {
+                "name": "Hrdinství",
+                "description": "Imunita vůči vystrašení po dobu 1 minuty"
+            },
+            "HideousLaughter": {
+                "name": "Tašin děsivý smích",
+                "description": "Aplikuje efekty stavů ´ležící´ a ´zneschopněný´ po dobu 1 minuty"
+            },
+            "HoldMonster": {
+                "name": "Znehybni nestvůru",
+                "description": "Aplikuje efekty stavu ´paralyzovaný´ po dobu 1 minuty"
+            },
+            "HoldPerson": {
+                "name": "Znehybni osobu",
+                "description": "Aplikuje efekty stavu ´paralyzovaný´ po dobu 1 minuty"
+            },
+            "HolyAura": {
+                "name": "Svatá aura",
+                "description": "Výhoda na záchranné hody, poskytuje Nevýhodu útočníkům a vyzařuje tlumené světlo v okruhu 5 stop (vyžaduje ATL) po dobu 1 minuty"
+            },
+            "HoodedLantern": {
+                "name": "Krytá lucerna",
+                "description": "Přidává světlo kryté lucerny po dobu 6 hodin (vyžaduje ATL)"
+            },
+            "HuntersMark": {
+                "name": "Lovcovo znamení",
+                "description": "Žádné aktivní efekty, trvá dokud není odstraněno (zatím)"
+            },
+            "Incapacitated": {
+                "name": "Zneschopněný",
+                "description": "- zneschopněná bytost nemůže provádět akce ani reakce"
+            },
+            "Inspiration": {
+                "name": "Inspirace",
+                "description": "Výhoda na cokoliv, vyprší po jakékoliv akci, záchranném hodu, ověření, nebo hodu na dovednost"
+            },
+            "Invisibility": {
+                "name": "Neviditelnost",
+                "description": "Poskytuje Výhodu na příští útočný hod a způsobuje Nevýhodu všem, kdo útočí na cíl, po dobu 1 hodiny. Vyprší po 1 útoku."
+            },
+            "Invisible": {
+                "name": "Neviditelný",
+                "description": "- Neviditelnou bytost není možné vidět bez pomoci magie nebo zvláštních smyslů. Pro účely skrývání se považuje za silně zakrytou. Její polohu lze určit podle zvuků nebo stop.<br />- Útoky proti této bytosti mají nevýhodu, zatímco její útočné hody mají výhodu."
+            },
+            "IrresistibleDance": {
+                "name": "Ottův neodolatelný tanec",
+                "description": "Rychlost 0, Nevýhoda na záchranné hody na Obratnost, Nevýhoda na útočné hody a poskytuje Výhodu všem útočníkům po dobu 1 minuty"
+            },
+            "Jump": {
+                "name": "Skok",
+                "description": "Žádné aktivní efekty, trvá 1 minutu"
+            },
+            "KiEmptyBody": {
+                "name": "Ki: Prázdné tělo",
+                "description": "Poskytuje Výhodu na útočné hody, způsobuje Nevýhodu všem, kdo útočí, a uděluje odolání vůči všem zraněním kromě silového po dobu 1 minuty"
+            },
+            "KiPatientDefense": {
+                "name": "Ki: Trpělivá obrana",
+                "description": "Způsobuje Nevýhodu všem, kdo útočí, a poskytuje Výhodu na všechny záchranné hody na Obratnost do příštího tahu"
+            },
+            "Lantern": {
+                "name": "Lucerna",
+                "description": "Přidává světlo lucerny po dobu 6 hodin (vyžaduje ATL)"
+            },
+            "Light": {
+                "name": "Světlo",
+                "description": "Vyzařuje světlo 20/40 stop po dobu 1 hodiny (vyžaduje ATL)"
+            },
+            "Longstrider": {
+                "name": "Dlouhokrok",
+                "description": "Zvýší veškerý pohyb o 10 stop po dobu 1 hodiny"
+            },
+            "MageArmor": {
+                "name": "Mágova zbroj",
+                "description": "Zvýší OČ na 13 + opravu Obratnosti po dobu 8 hodin"
+            },
+            "MindBlank": {
+                "name": "Ukryj mysl",
+                "description": "Poskytuje imunitu vůči psychickému zranění po dobu 24 hodin"
+            },
+            "Mindfire": {
+                "name": "Zápal mozkových blan",
+                "description": "Nevýhoda na ověření Inteligence a záchranné hody na Inteligenci po dobu 7 dní"
+            },
+            "MirrorImage": {
+                "name": "Zrcadlový obraz",
+                "description": "Žádné aktivní efekty, trvá 1 minutu"
+            },
+            "OwlsWisdom": {
+                "name": "Soví moudrost",
+                "description": "Výhoda na ověření moudrosti po dobu 1 hodiny"
+            },
+            "Paralyzed": {
+                "name": "Paralyzovaná",
+                "description": "- paralyzovaná bytost je ´zneschopněná´ (viz stav) a nemůže se hýbat ani mluvit.<br />- Automaticky neuspěje v záchranných hodech na Sílu a Obratnost. Útoky proti ní mají Výhodu.<br />- Jakýkoli útok, který bytost zasáhne, je kritický zásah, pokud útočník stojí do 5 stop od ní."
+            },
+            "PassWithoutTrace": {
+                "name": "Projdi beze stopy",
+                "description": "Přidává +10 k ověření Nenápadnosti po dobu 1 hodiny"
+            },
+            "Petrified": {
+                "name": "Zkamenělý",
+                "description": "- zkamenělá bytost se promění spolu se všemi nemagickými předměty, které má na sobě nebo nese, v pevnou neživou látku (obvykle kámen). Její hmotnost se zvýší desetinásobně a přestane stárnout.<br />- Bytost je zneschopněna (viz stav), nemůže se pohybovat ani mluvit a není si vědoma svého okolí.<br />- Útoky proti bytosti mají Výhodu.<br />- Bytost automaticky neuspěje v záchranných hodech na Sílu a Obratnost.<br />- Bytost má odolání vůči všem zraněním.<br />- Bytost je imunní vůči jedům a nemocem, ale pokud už má nějaký jed či nemoc v těle, jsou pozastaveny, nikoli neutralizovány."
+            },
+            "Poisoned": {
+                "name": "Otrávený",
+                "description": "- otrávená bytost má Nevýhodu na útočné hody a ověření vlastností."
+            },
+            "Prone": {
+                "name": "Ležící",
+                "description": "- ležící bytost se může pohybovat pouze plazením, pokud se nepostaví a tím nezruší tento stav.<br />- Má Nevýhodu na útočné hody.<br />- Útok proti ní má Výhodu, pokud útočník stojí do 5 stop od ní. Jinak má útok Nevýhodu."
+            },
+            "ProtectionFromAcid": {
+                "name": "Ochrana před kyselinou",
+                "description": "Poskytuje odolání vůči kyselinovému zranění po dobu 1 hodiny"
+            },
+            "ProtectionFromCold": {
+                "name": "Ochrana před chladem",
+                "description": "Poskytuje odolání vůči chladnému zranění po dobu 1 hodiny"
+            },
+            "ProtectionFromEnergy": {
+                "name": "Ochrana před energií",
+                "description": "Vyber mezi odoláním vůči kyselině, chladu, ohni, blesku, nebo hromu"
+            },
+            "ProtectionFromEvilAndGood": {
+                "name": "Ochrana před zlem a dobrem",
+                "description": "Žádné aktivní efekty a trvá 10 minut"
+            },
+            "ProtectionFromFire": {
+                "name": "Ochrana před ohněm",
+                "description": "Přidává odolání vůči ohnivému zranění po dobu 1 hodiny"
+            },
+            "ProtectionFromLightning": {
+                "name": "Ochrana před bleskem",
+                "description": "Přidává odolání vůči bleskovému zranění po dobu 1 hodiny"
+            },
+            "ProtectionFromPoison": {
+                "name": "Ochrana před jedem",
+                "description": "Přidává odolání vůči jedu po dobu 1 hodiny (neposkytuje automatickou Výhodu na záchranné hody proti jedu)"
+            },
+            "ProtectionFromThunder": {
+                "name": "Ochrana před hromem",
+                "description": "Přidává odolání vůči hromovému zranění po dobu 1 hodiny"
+            },
+            "Rage": {
+                "name": "Zuřivot",
+                "description": "Výhoda na ověření Síly a záchranné hody na Sílu, variabilní bonus k zásahu na blízko na základě úrovně barbara a odolání vůči bodným, sečných a drtivým zraněním po dobu 1 minuty. Také zohledňuje odolání z cesty Totemového bojovníka.",
+                "notABarbarian": "Vybraný aktér není barbar",
+                "bearTotemFeat": "Totemový duch: Medvěd"
+            },
+            "RangedDisadvantage": {
+                "name": "Nevýhoda na útoky na dálku",
+                "description": "Nevýhoda na útočné hody na dálku"
+            },
+            "RayOfFrost": {
+                "name": "Mrazivý paprsek",
+                "description": "Snižuje pohyb o 10 stop"
+            },
+            "Reaction": {
+                "name": "Reakce",
+                "description": "Žádné aktivní efekty a vyprší na začátku kola"
+            },
+            "Ready": {
+                "name": "Příprava",
+                "description": "Žádné aktivní efekty a vyprší na začátku kola"
+            },
+            "RecklessAttack": {
+                "name": "Bezhlavý útok",
+                "description": "Výhoda na útoky na blízka na jedno kolo a poskytuje Výhodu těm, kteří útočí, na 1 kolo"
+            },
+            "RecklessAttackAdvantageOnAttacks": {
+                "name": "Bezhlavý útok (Výhoda na útoky)",
+                "description": "Výhoda na útoky na blízko až do konce kola"
+            },
+            "Reduce": {
+                "name": "Zmenšit",
+                "description": "Odečítá 1k4 od zásahu a poskytuje Nevýhodu na ověření Síly a záchranné hody na Sílu po dobu 1 minuty"
+            },
+            "Regenerate": {
+                "name": "Regenerace",
+                "description": "Získáš 1 bod výdrže na začátku každého kola po dobu 1 hodiny"
+            },
+            "ResilientSphere": {
+                "name": "Otilukova nepoddajná koule",
+                "description": "Přidává úplnou imunitu vůči všem zraněním a polovinu pohybu po dobu 1 minuty"
+            },
+            "Resistance": {
+                "name": "Odolání",
+                "description": "Přidává 1k4 k jednomu záchrannému hodu v příští minutě"
+            },
+            "Restrained": {
+                "name": "Spoutaný",
+                "description": "- Rychlost spoutané bytosti se stává 0, a nemůže využít žádného bonusu k Rychlosti.<br />- Útočné hody proti této bytosti mají Výhodu a útočné hody této bytosti mají Nevýhodu.<br />- Tato bytost má Nevýhodu na záchranné hody na Obratnost."
+            },
+            "Seizure": {
+                "name": "Třesavka",
+                "description": "Nevýhoda na ověření Obratnosti, záchranné hody na Obratnost a útoky Obratnost využívající, po dobu 7 dnů"
+            },
+            "Sharpshooter": {
+                "name": "Ostrostřelec",
+                "description": "Odečítá 5 útoků na dálku, ale přidává 10 k zásahu na dálku"
+            },
+            "Shield": {
+                "name": "Štít",
+                "description": "Přidává 5 k OČ do začátku příštího kola"
+            },
+            "ShieldOfFaith": {
+                "name": "Štít víry",
+                "description": "Přidává 2 k OČ po dobu 10 minut"
+            },
+            "SlimyDoom": {
+                "name": "Slizká zhouba",
+                "description": "Nevýhoda na ověření Odolnosti a záchranné hody na Odolnost po dobu 7 dnů"
+            },
+            "Slow": {
+                "name": "Zpomalení",
+                "description": "Zpomaluje pohyb na polovinu a odebírá 2 od OČ a od záchranných hodů na Obratnost po dobu 1 minuty"
+            },
+            "SpeakWithAnimals": {
+                "name": "Mluv se zvířaty",
+                "description": "Žádné aktivní efekty a trvá 10 minut"
+            },
+            "SpeakWithDead": {
+                "name": "Mluví s mrtvými",
+                "description": "Žádné aktivní efekty a trvá 10 minut"
+            },
+            "SpeakWithPlants": {
+                "name": "Mluv rostlinami",
+                "description": "Žádné aktivní efekty a trvá 10 minut"
+            },
+            "SpiderClimb": {
+                "name": "Pavoučí šplh",
+                "description": "Přidává Rychlost šplhu rovnou Rychlosti chůze po dobu 1 hodiny"
+            },
+            "SpiritGuardians": {
+                "name": "Přízrační strážci",
+                "description": "Žádné aktivní efekty a trvá 10 minut"
+            },
+            "SpiritualWeapon": {
+                "name": "Duchovní zbraň",
+                "description": "Žádné aktivní efekty a trvá 1 minutu"
+            },
+            "Stoneskin": {
+                "name": "Kamenná kůže",
+                "description": "Přidává odolání vůči nemagickému fyzickému zranění po dobu 1 hodiny"
+            },
+            "Stunned": {
+                "name": "Omráčený",
+                "description": "- omráčená bytost je zneschopněná (viz stav), nemůže se pohybovat a může mluvit pouze ztěžka.<br />- Bytost automaticky selže v záchranných hodech na Sílu a Obratnost.<br />- Útočné hody proti této bytosti mají Výhodu."
+            },
+            "Suggestion": {
+                "name": "Sugesce",
+                "description": "Žádné aktivní efekty a trvá 8 hodin"
+            },
+            "Telekinesis": {
+                "name": "Telekineze",
+                "description": "Žádné aktivní efekty a trvá 10 minut"
+            },
+            "Torch": {
+                "name": "Pochodeň",
+                "description": "Přidává světlo pochodně po dobu 1 hodiny (vyžaduje ATL)"
+            },
+            "TrueStrike": {
+                "name": "Přesný úder",
+                "description": "Přidává Výhodu k následujícímu útoku, nebo do konce příštího kola"
+            },
+            "Unconscious": {
+                "name": "V bezvědomí",
+                "description": "- bezvědomá bytost je zneschopněná (viz stav), nemůže se pohybovat ani mluvit a není si vědoma svého okolí.<br />- Bytost upustí všechno, co drží, a spadne na zem (viz stav).<br />- Bytost automaticky selže v záchranných hodech na Sílu a Obratnost.<br />- Útočné hody proti této bytosti mají Výhodu.<br />- Každý útok, který zasáhne tuto bytost, je kritický, pokud útočník stojí do 5 stop od ní."
+            },
+            "ViciousMockery": {
+                "name": "Zlomyslný výsměch",
+                "description": "Přidává Nevýhodu k následujícímu útoku, nebo do konce příštího kola"
+            },
+            "WardingBond": {
+                "name": "Strážné pouto",
+                "description": "Přidává 1 k OČ a k záchranným hodům a přidává odolání vůči všem zraněním po dobu 1 hodiny"
+            },
+            "WaterBreathing": {
+                "name": "Vodní dech",
+                "description": "Žádné aktivní efekty a trvá 24 hodin"
+            },
+            "WaterWalk": {
+                "name": "Chůze po vodě",
+                "description": "Žádné aktivní efekty a trvá 1 hodinu"
+            },
+            "Wounded": {
+                "name": "Zraněný",
+                "description": "Žádné aktivní efekty"
+            }
+        }
+    }
+}
