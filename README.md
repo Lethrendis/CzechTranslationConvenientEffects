@@ -1,10 +1,10 @@
 
 # CzechConvenientEffects
 
-Czech translation of Convenient Effects version 7.3.0
+Czech translation of Convenient Effects version 7.4.2
 
 ## Popis
-Tento modul poskytuje českou lokalizaci pro Convenient Effects verze 7.3.0. Obsahuje překlady základních textů aplikace.
+Tento modul poskytuje českou lokalizaci pro Convenient Effects verze 7.4.2. Obsahuje překlady základních textů aplikace.
 
 ## Instalace
 Pro instalaci modulu obvyklým upůsobem můžeš použít následující odkaz ve Foundry VTT:
