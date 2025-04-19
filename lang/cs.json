@@ -1,7 +1,7 @@
 {
 "ConvenientEffects": {
         "AppName": "Pohodlné efekty (Convenient Effects)",
-        "BackupAppName": "Záloha pohodlných efektů",
+        "BackupAppName": "Záloha ´Pohodlných efektů´",
 
         "SettingPlayer": "Hráč",
         "SettingTrustedPlayer": "Důvěryhodný hráč",
@@ -31,10 +31,14 @@
         "DeleteEffect": "Smazat efekt",
         "ShowEffect": "Zobrazit efekt",
         "HideEffect": "Skrýt efekt",
+        "ToggleConvenientEffect": "Přepnout ´Pohodlný efekt´",
         "ToggleAsOverlay": "Přepnout jako překryv",
         "ToggleStatusEffect": "Přepnout efekt stavu",
         "ResetSystemEffects": "Resetovat systémové efekty",
         "ResetSystemEffectsWarning": "Tímto se systémové efekty zcela resetují na vestavěné efekty, čímž se zruší všechny vlastní úpravy, odstranění i vytvoření.",
+        "SelectEffect": "Vybrat efekt",
+        "NoPermissionToRemoveEffect": "Nemáš oprávnění efekt {effectName} odstranit z adresáře {originalFolderName}. Efekt byl duplikován do nového adresáře {newFolderName}",
+        "NoPermissionToAddEffect": "Nemáš oprávnění efekt {effectName} přidat do adresáře {newFolderName}",
 
         "FolderHidden": "Skrytá složka",
         "Passive": "Pasivní",
@@ -50,26 +54,31 @@
         "ConfigLabel": "Pohodlné",
         "ConfigFoundryEffectIdLabel": "ID efektu Foundry",
         "ConfigFoundryEffectIdHint": "Toto je ID efektu Foundry a lze jej použít k vyhledání, přidání, nebo odstranění efektu.",
-        "ConfigConvenientEffectIdLabel": "ID efektu pohodlného efektu",
-        "ConfigConvenientEffectIdHint": "Toto je ID pohodlného efektu a lze jej použít k vyhledání, přidání, nebo odstranění efektu.",
+        "ConfigConvenientEffectIdLabel": "ID efektu ´Pohodlného efektu´",
+        "ConfigConvenientEffectIdHint": "Toto je ID ´Pohodlného efektu´ a lze jej použít k vyhledání, přidání, nebo odstranění efektu.",
         "ConfigTemporaryLabel": "Dočasný",
         "ConfigTemporaryHint": "Pokud je zaškrtnuto, bude tento efekt vždy označen jako dočasný, i když nemá žádné trvání či stav.",
         "ConfigViewableLabel": "Viditelný",
         "ConfigViewableHint": "Pokud je zaškrtnuto, bude tento efekt vždy zobrazen v aplikaci.",
         "ConfigDynamicLabel": "Dynamický",
-        "ConfigDynamicHint": "Pokud je zaškrtnuto, pak tento efekt bude mít dynamické efekty aplikované na základě dat postavy. Toto nelze změnit a používá se pro velmi specifické případy efektů.",
+        "ConfigDynamicHint": "Pokud je zaškrtnuto, pak tento efekt bude mít dynamické efekty aplikované na základě dat aktéra. Toto nelze změnit a používá se pro velmi specifické případy efektů.",
         "ConfigNestedEffectsLabel": "Vnořené efekty",
         "ConfigNestedEffectsHint": "Vnořené efekty, které budou zobrazeny jako možnosti při přidání či odebrání efektu.",
         "ConfigSubEffectsLabel": "Podřízené efekty",
         "ConfigSubEffectsHint": "Podřízené efekty, které budou aplikovány v souvislosti s tímto efektem. Pokud je tento efekt odstraněn, všechny podřízené efekty budou automaticky odstraněny také.",
         "ConfigOtherEffectsLabel": "Další efekty",
         "ConfigOtherEffectsHint": "Další efekty, které budou aplikovány v souvislosti s tímto efektem. Pokud je tento efekt odstraněn, další efekty nebudou automaticky odstraněny.",
+        
+        "Initializing": "Zavádění ´Pohodlných efektů´...",
+        "FinishedInitializing": "Dokončení zavádění ´Pohodlných efektů´",
+
         "Dnd": {
             "Folders": {
                 "Conditions": "Stavy",
                 "Spells": "Kouzla",
                 "ClassFeatures": "Schopnosti povolání",
                 "Equipment": "Vybavení",
+                "MagicItems": "Kouzelné předměty",
                 "Other": "Ostatní"
             },
             "AcidArrow": {
@@ -83,6 +92,10 @@
             "AlterSelf": {
                 "name": "Změň svůj tvar",
                 "description": "Žádné aktivní efekty, trvá 1 hodinu"
+            },
+            "AmuletOfHealth": {
+                "name": "Amulet zdraví",
+                "description": "Vylepší Odolnost na 19"
             },
             "AntilifeShell": {
                 "name": "Štít proti živým",
@@ -128,9 +141,41 @@
                 "name": "Medvědí odolnost",
                 "description": "Výhoda na ověřování Odolnosti a 2k6 dočasných bodů výdrže po dobu 1 hodiny"
             },
+            "BeltOfDwarvenkind": {
+                "name": "Trpasličí opasek",
+                "description": "- Přidá +2 k Odolnosti do maxima 20<br/>- Přidá odolání vůči jedům<br/>- Přidá vidění ve tmě<br/>- Přidá trpasličí jazyk"
+            },
+            "BeltOfGiantStrength": {
+                "name": "Opasek obří síly",
+                "description": "Zvol si mezi opasky kopcového, ledového, kamenného, ohnivého, oblačného, nebo bouřného obra"
+            },
+            "BeltOfHillGiantStrength": {
+                "name": "Opasek síly kopcového obra",
+                "description": "Zvýší Sílu na 21"
+            },
+            "BeltOfFrostGiantStrength": {
+                "name": "Opasek síly ledového obra",
+                "description": "Zvýší Sílu na 23"
+            },
+            "BeltOfStoneGiantStrength": {
+                "name": "Opasek síly kamenného obra",
+                "description": "Zvýší Sílu na 23"
+            },
+            "BeltOfFireGiantStrength": {
+                "name": "Opasek síly ohnivého obra",
+                "description": "Zvýší Sílu na 25"
+            },
+            "BeltOfCloudGiantStrength": {
+                "name": "Opasek síly oblačného obra",
+                "description": "Zvýší Sílu na 27"
+            },
+            "BeltOfStormGiantStrength": {
+                "name": "Opasek síly bouřného obra",
+                "description": "Zvýší Sílu na 29"
+            },
             "BlackTentacles": {
                 "name": "Evardova černá chapadla",
-                "description": "Aplikuje efekt stavu ´spoutaný´ po dobu 1 minuty"
+                "description": "Aplikuje efekt stavu ´spoutaný´ na dobu 1 minuty"
             },
             "Bless": {
                 "name": "Požehnání",
@@ -159,6 +204,26 @@
             "BonusAction": {
                 "name": "Bonusová akce",
                 "description": "Žádné aktivní efekty, vyprší na začátku tahu"
+            },
+            "BootsOfElvenkind": {
+                "name": "Elfí boty",
+                "description": "Výhoda na ověření Nenápadnosti"
+            },
+            "BootsOfTheWinterlands": {
+                "name": "Botky mrazivky",
+                "description": "Přidá odolání vůči zranění chladem"
+            },
+            "BroochOfShielding": {
+                "name": "Brož zaštítění",
+                "description": "Přidá odolání vůči silovému zranění"
+            },
+            "BracersOfArchery": {
+                "name": "Nátepníky lukostřlby",
+                "description": "- Přidá +2 k zásahu útokem zbraní na dálku<br/>- Přidá zdatnosti s dlouhými a krátkými luky"
+            },
+            "BracersOfDefense": {
+                "name": "Nátepníky obrany",
+                "description": "- Přidá +2 k OČ"
             },
             "BullsStrength": {
                 "name": "Býčí síla",
@@ -194,7 +259,23 @@
             },
             "Charmed": {
                 "name": "Zmámený",
-                "description": "- zmámená bytost nemůže útočit na zmámitele, ani jej cílit škodícími schopnostmi či magickými efekty.<br/>- zmámitel má při sociální interakci s touto bytostí Výhodu na všechna ověření vlastností."
+                "description": "- zmámená bytost nemůže útočit na zmámitele, ani jej cílit škodícími schopnostmi či magickými efekty.<br/>- zmámitel má při sociální interakci s touto bytostí Výhodu na všechna ověření vlastností"
+            },
+            "CloakOfDisplacement": {
+                "name": "Plášť klamu",
+                "description": "Uděluje Nevýhodu všem útočníkům"
+            },
+            "CloakOfElvenkind": {
+                "name": "Elfíh plášť",
+                "description": "Výhoda na ověření Nenápadnosti"
+            },
+            "CloakOfProtection": {
+                "name": "Ochranný plášž",
+                "description": "Přidává +1 k OČ a +1 ke všem záchranám"
+            },
+            "CloakOfTheMantaRay": {
+                "name": "Rejnočí plášť",
+                "description": "Přidává Rychlost plavání 60 stop"
             },
             "Command": {
                 "name": "Rozkaz",
@@ -300,6 +381,10 @@
                 "name": "Vyčerpání 5",
                 "description": "Nevýhoda na ověření vlastností, Rychlost snížena na 0, Nevýhoda na útoky a záchranné hody a poloviční maximální počet bodů výdrže"
             },
+            "EyesOfTheEagle": {
+                "name": "Orlí oči",
+                "description": "Výhoda na ověření Vnímání"
+            },
             "FaerieFire": {
                 "name": "Vílí oheň",
                 "description": "Poskytuje Výhodu všem útočníkům po dobu 1 minuty"
@@ -366,11 +451,19 @@
             },
             "Frightened": {
                 "name": "Vystrašený",
-                "description": "- vystrašená bytost má Nevýhodu na ověření vlastností a útočné hody, dokud má zdroj svého strachu v dohledu.<br />- Nemůže se dobrovolně přiblížit ke zdroji svého strachu."
+                "description": "- vystrašená bytost má Nevýhodu na ověření vlastností a útočné hody, dokud má zdroj svého strachu v dohledu.<br />- Nemůže se dobrovolně přiblížit ke zdroji svého strachu"
+            },
+            "GauntletsOfOgrePower": {
+                "name": "Rukavice zlobří síly",
+                "description": "Zvýší Sílu na 19"
             },
             "GlobeOfInvulnerability": {
                 "name": "Koule nezranitelnosti",
                 "description": "Žádné aktivní efekty, trvá 1 minutu"
+            },
+            "GogglesOfNight": {
+                "name": "Brýle noci",
+                "description": "Přidá vidění ve tmě 60 stop"
             },
             "Grappled": {
                 "name": "Držený",
@@ -389,12 +482,16 @@
                 "description": "Přidává 1k4 k jednomu ověření vlastnosti či dovednosti po dobu 1 minuty"
             },
             "GuidingBolt": {
-                "name": "Naváděná střela",
+                "name": "Naváděcí střela",
                 "description": "Poskytuje výhodu dalšímu útočníkovi, nebo do konce příštího tahu"
             },
             "Haste": {
                 "name": "Rychlost",
                 "description": "Zdvojnásobí Rychlost, přidá 2 k OČ a poskytuje Výhodu na záchranné hody na Obratnost po dobu 1 minuty"
+            },
+            "HeadbandOfIntellect": {
+                "name": "Čelenka intelektu",
+                "description": "Zvýší Inteligenci na 19"
             },
             "HeavilyEncumbered": {
                 "name": "Těžké zatížení",
@@ -429,7 +526,7 @@
                 "description": "Přidává světlo kryté lucerny po dobu 6 hodin (vyžaduje ATL)"
             },
             "HuntersMark": {
-                "name": "Lovcovo znamení",
+                "name": "Lovcova značka",
                 "description": "Žádné aktivní efekty, trvá dokud není odstraněno (zatím)"
             },
             "Incapacitated": {
@@ -480,8 +577,12 @@
                 "name": "Mágova zbroj",
                 "description": "Zvýší OČ na 13 + opravu Obratnosti po dobu 8 hodin"
             },
+            "MantleOfSpellResistance": {
+                "name": "Pelerína magického odolání",
+                "description": "Přidá Výhodu na záchrany proti kouzlům"
+            },
             "MindBlank": {
-                "name": "Ukryj mysl",
+                "name": "Čistá mysl",
                 "description": "Poskytuje imunitu vůči psychickému zranění po dobu 24 hodin"
             },
             "Mindfire": {
@@ -503,6 +604,14 @@
             "PassWithoutTrace": {
                 "name": "Projdi beze stopy",
                 "description": "Přidává +10 k ověření Nenápadnosti po dobu 1 hodiny"
+            },
+            "PeriaptOfHealth": {
+                "name": "Škapulíř zdraví",
+                "description": "Přidá imunitu vůči nemocem"
+            },
+            "PeriaptOfProofAgainstPoison": {
+                "name": "Škapulíř proti jedu",
+                "description": "Přidá imunitu vůči jedovému hzranění a stavu otrávený/á"
             },
             "Petrified": {
                 "name": "Zkamenělý",
@@ -598,6 +707,74 @@
                 "name": "Spoutaný",
                 "description": "- Rychlost spoutané bytosti se stává 0, a nemůže využít žádného bonusu k Rychlosti.<br />- Útočné hody proti této bytosti mají Výhodu a útočné hody této bytosti mají Nevýhodu.<br />- Tato bytost má Nevýhodu na záchranné hody na Obratnost."
             },
+            "RingOfResistance": {
+                "name": "Prsten odolání",
+                "description": "Zvol si mezi odolnáním vůči kyselině, chladu, ohni, síle, bleskům, nekrotickému, jedovému, psychickému, zářivémé, nebo hromovému zranění"
+            },
+            "RingOfAcidResistance": {
+                "name": "Prsten odolání vůči kyselině",
+                "description": "Přidává odolání vůči kyselinovému zranění"
+            },
+            "RingOfColdResistance": {
+                "name": "Prsten odolání vůči chladu",
+                "description": "Přidává odolání vůči chladnvému zranění"
+            },
+            "RingOfFireResistance": {
+                "name": "Prsten odolání vůči ohni",
+                "description": "Přidává odolání vůči ohnivému zranění"
+            },
+            "RingOfForceResistance": {
+                "name": "Prsten odolání vůči síle",
+                "description": "Přidává odolání vůči silovému zranění"
+            },
+            "RingOfLightningResistance": {
+                "name": "Prsten odolání vůči bleskům",
+                "description": "Přidává odolání vůči bleskovému zranění"
+            },
+            "RingOfNecroticResistance": {
+                "name": "Prsten odolání vůči nekrotickému zranění",
+                "description": "Přidává odolání vůči nekrotickému zranění"
+            },
+            "RingOfPoisonResistance": {
+                "name": "Prsten odolání vůči jedu",
+                "description": "Přidává odolání vůči jedovému zranění"
+            },
+            "RingOfPsychicResistance": {
+                "name": "Prsten odolání vůči psychickému zranění",
+                "description": "Přidává odolání vůči psychickému zranění"
+            },
+            "RingOfRadiantResistance": {
+                "name": "Prsten odolání vůči zářivému zranění",
+                "description": "Přidává odolání vůči zářivému zranění"
+            },
+            "RingOfThunderResistance": {
+                "name": "Prsten odolnosti vůči hromu",
+                "description": "Přidává odolnost vůči hromovému zranění"
+            },
+            "RingOfFreeAction": {
+                "name": "Prsten volného pohybu",
+                "description": "Přidává imunitu vůči paralýze a spoutání"
+            },
+            "RingOfSwimming": {
+                "name": "Prsten plavání",
+                "description": "Přidává Rychlost plavání 40 stop"
+            },
+            "RingOfWarmth": {
+                "name": "Prsten tepla",
+                "description": "Přidává odolání vůči chladu"
+            },
+            "RobeOfEyes": {
+                "name": "Roucho očí",
+                "description": "Výhoda na ověření Vnímání, zlepšuje vidění ve tmě na 120 stop a pravdivé vidění na 120 stop"
+            },
+            "RobeOfStars": {
+                "name": "Roucho hvězd",
+                "description": "Přidává +1 ke všem záchranným hodům"
+            },
+            "RobeOfTheArchmagi": {
+                "name": "Arcimágovo roucho",
+                "description": "Nastaví základní OČ na 15 + opravu Obratnosti, přidává Výhodu k záchranným hodům proti kouzlům a +2 k hodům na útok kouzly a k SO kouzel"
+            },
             "Seizure": {
                 "name": "Třesavka",
                 "description": "Nevýhoda na ověření Obratnosti, záchranné hody na Obratnost a útoky Obratnost využívající, po dobu 7 dnů"
@@ -649,6 +826,10 @@
             "Stoneskin": {
                 "name": "Kamenná kůže",
                 "description": "Přidává odolání vůči nemagickému fyzickému zranění po dobu 1 hodiny"
+            },
+            "StoneOfGoodLuck": {
+                "name": "Kámen štěstí",
+                "description": "Přidává +1 ke všem oveřením a záchranám"
             },
             "Stunned": {
                 "name": "Omráčený",
